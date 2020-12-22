@@ -54,6 +54,8 @@ public class NegativeToggle : MonoBehaviour
     The doorway contains two colliders. 
     The below Trigger methods check that contact has been made with both colliders, 
     then enables/disables the filter dependent on the collider last exited.
+    This ensures that the shader which inverts the colours will be activated if stepped through one way and deactivated if stepped throught he other
+    as opposed to being toggled on/off regardless of direction
     */
     void OnTriggerEnter(Collider c){
         if (c == negCol || c == posCol){
